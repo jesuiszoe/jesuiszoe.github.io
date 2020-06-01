@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>kimminchae</title>
+		
+		<meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
+		<meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
+		<script>
+			document.documentElement.className = 'js';
+			var supportsCssVars = function() {
+				var s = document.createElement('style'),
+				support;
+
+				s.innerHTML = "root: { --tmp-var: bold; }";
+				document.head.appendChild(s);
+				support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+				s.parentNode.removeChild(s);
+				return support;
+			}
+			if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+		</script>
+	</head>
+	<body class="demo-2 loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="shape-demo" viewBox="0 0 200 100">
+				<title>shape demo</title>
+				<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z" />
+			</symbol>
+		</svg>
+		<main>
+			<div class="morph-wrap">
+				<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+					<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+				</svg>
+			</div>
+			<div class="content content--fixed">
+				<header class="codrops-header">
+					<div class="codrops-links">
+						<svg class="decoshape" viewBox="0 0 200 100" width="100%" height="100%" preserveAspectRatio="none">
+							<path d="M 10.45,74.41 C 39.4,110.8 72.59,67.27 95.98,68.68 122.3,70.35 131.5,101.4 154.7,99.69 177.9,98.03 200.5,79.26 198.1,47.17 195.9,15.27 174.6,-0.3279 151.8,0.9941 128.6,2.581 126,16.86 107,22.76 88.26,28.67 88.87,12.36 60.37,1.787 31.79,-8.877 -18.61,37.92 10.45,74.41 Z" />
+						</svg>
+						<a class="codrops-icon codrops-icon--prev" href="#" title="Previous Demo"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+						<a class="codrops-icon codrops-icon--drop" href="#" title="Back to the article"><svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a>
+					</div>
+					<h1 class="codrops-header__title">About me </h1>
+				</header>
+				<nav class="demos">
+					<a class="demo" href="index2.html"><svg class="decoshape" preserveAspectRatio="none"><use xlink:href="#shape-demo"></use></svg>Photos</a>
+					<a class="demo demo--current" href="index.html"><svg class="decoshape"><use xlink:href="#shape-demo"></use></svg>Home</a>
+					
+				</nav>
+				
+				<div class="deco deco--title">KIM MINCHAE 2020 &nbsp;&nbsp;&nbsp;</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content content--layout content--layout-1">
+					<img class="content__img" src="img/m1.jpg" alt="Some image" />
+					<h3 class="content__title">minchae</h3>
+					<p class="content__author">moi</p>
+					<p class="content__desc" style="font-size:13.5px;font-family:'Noto Sans CJK KR';">
+						김민채, 1999년생, 서울 <br />
+						한국외국어대학교 스페인어과 <br />
+						뭘 할지 몰라서 하고 싶은 거 다 해보는 중<br />
+						요즘 읽는 책 :
+						<뭘 할지는 모르지만 아무거나 하긴 싫어>,&nbsp;
+					
+							좋아하는 것들 : 사진, 필름카메라, 그림, 축구, 공연 & 페스티벌 그리고 계속 늘어나는 중
+					</p>
+					<a href="https://www.instagram.com/faismesdevoirs/" class="content__link">Instagram</a>
+				</div>
+
+			</div>
+			<div class="content-wrap">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/4.jpg" alt="Some image" />
+					<h3 class="content__title">music</h3>
+					<p class="content__author"></p>
+					<p class="content__desc">
+						like all kinds of genre of music<br />
+
+						My favorite songs <br />
+						1. Liability<br />
+						(cover by Yebit)<br />
+						<a href="https://soundcloud.com/yebit" class="content__link"> soundcloud</a> <br />
+						2. Days gone by - DAY6
+						<a href="https://www.youtube.com/watch?v=1nk5O__ALI8" class="content__link"> youtube</a> <br />
+					</p>
+					
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/m3.jpg" alt="Some image" />
+					<h3 class="content__title">photo</h3>
+					<p class="content__author">@zoezoekim</p>
+					<p class="content__desc">
+						Using canon eos30 for film photograhpy.
+					</p>
+					
+					<a href="https://www.instagram.com/zoezoekim/" class="content__link"> Instagram</a> <br />
+					
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/2.jpg" alt="Some image" />
+					<h3 class="content__title">spanish</h3>
+					<p class="content__author"></p>
+					<p class="content__desc">¡Hola! Me llamo Zoé. Yo soy estudiante de departamento de español en la Universidad Hankuk de Estudios Extranjeros. </p>
+					<a href="http://hufspain.hufs.ac.kr/" class="content__link">hufsspain</a>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content content--layout content--layout-1">
+					<img class="content__img" src="img/5.jpg" alt="Some image" />
+					<h3 class="content__title">french</h3>
+					<p class="content__author"></p>
+					<p class="content__desc">
+						Salut! Je m'appelle Zoé.
+						j'ai étudié le français au lycée de langue étrangère.
+						&nbsp;<br />
+						&nbsp;<br />
+						ma chanson préférée<br />
+					</p>
+					<a href="https://www.youtube.com/watch?v=_TIPjyLFUBY" class="content__link"> Va va vis</a>
+				</div>
+			</div>
+			<!-- Related demos -->
+			<section class="content content--related">
+				<p class="content__info"> 읽은 책들을 기록하고 있습니다. my blog posts- books </p>
+				<a class="content__related-item" href="https://blog.naver.com/dlwlrma10/221893761809">
+					<img class="content__related-img" src="img/related/ana.jpg">
+					<h3 class="content__related-title">The Revenge of Analog</h3>
+				</a>
+				<a class="content__related-item" href="https://blog.naver.com/dlwlrma10/221926665332">
+					<img class="content__related-img" src="img/related/habit.jpg">
+					<h3 class="content__related-title">Atomic habits</h3>
+				</a>
+			</section>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/scrollMonitor.js"></script>
+		<script src="js/demo2.js"></script>
+	</body>
+</html>
